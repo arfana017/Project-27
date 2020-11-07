@@ -21,13 +21,13 @@ function setup() {
 	bobObject3 = new Bob(280,600,90);
 	bobObject4 = new Bob(370,600,90);
 	bobObject5 = new Bob(460,600,90);
-	roofObject = new Roof(280,150,480,50);
+	roof = new Roof(280,150,480,50);
 
-	rope1 = new Rope(bobObject1.body,roofObject.body,-180,0);
-	rope2 = new Rope(bobObject2.body,roofObject.body);
-	rope3 = new Rope(bobObject3.body,roofObject.body);
-	rope4 = new Rope(bobObject4.body,roofObject.body);
-	rope5 = new Rope(bobObject5.body,roofObject.body);
+	rope1 = new Rope(bobObject1.body,roof.body,-180,0);
+	rope2 = new Rope(bobObject2.body,roof.body);
+	rope3 = new Rope(bobObject3.body,roof.body);
+	rope4 = new Rope(bobObject4.body,roof.body);
+	rope5 = new Rope(bobObject5.body,roof.body);
 	
 	//Create the Bodies Here.
 
