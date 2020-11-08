@@ -10,23 +10,23 @@ function preload()
 }
 
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(1000, 700);
 
 
 	engine = Engine.create();
 	world = engine.world;
-	bobObject1 = new Bob(100,600,90);
-	bobObject2 = new Bob(190,600,90);
-	bobObject3 = new Bob(280,600,90);
-	bobObject4 = new Bob(370,600,90);
-	bobObject5 = new Bob(460,600,90);
-	roof = new Roof(280,150,480,50);
+	bobObject1 = new Bob(320,600,90);
+	bobObject2 = new Bob(410,600,90);
+	bobObject3 = new Bob(500,600,90);
+	bobObject4 = new Bob(590,600,90);
+	bobObject5 = new Bob(680,600,90);
+	roof = new Roof(500,150,480,50);
 
 	rope1 = new Rope(bobObject1.body,roof.body,-180,0);
-	rope2 = new Rope(bobObject2.body,roof.body);
-	rope3 = new Rope(bobObject3.body,roof.body);
-	rope4 = new Rope(bobObject4.body,roof.body);
-	rope5 = new Rope(bobObject5.body,roof.body);
+	rope2 = new Rope(bobObject2.body,roof.body,-90,0);
+	rope3 = new Rope(bobObject3.body,roof.body,0,0);
+	rope4 = new Rope(bobObject4.body,roof.body,90,0);
+	rope5 = new Rope(bobObject5.body,roof.body,180,0);
 	
 	//Create the Bodies Here.
 
@@ -55,9 +55,12 @@ function draw() {
  
 }
 
+function keyPressed() {
+	if (keyCode === UP_ARROW) {
+
+		Matter.Body.applyForce(bobObject1.body, bobObject1.body.position, {x:-500,y:305})
+
+	}
 
 
-
-
-
-
+}
