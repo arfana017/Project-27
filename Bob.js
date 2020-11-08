@@ -5,9 +5,9 @@ class Bob {
         var options = {
             
             isStatic:false,
-           restitution:0.3,
+           restitution:0.9,
            friction:0.5,
-           density:1.2 
+           density:1.2
 
         }
 
@@ -22,11 +22,14 @@ class Bob {
 
     display() {
 
-        var pos = this.body.postion;
+        var pos = this.body.position;
         push();
+        translate(pos.x,pos.y);
+        rotate(this.body.angle);
         rectMode(CENTER);
         fill("pink");
-        ellipse(this.x,this.y,this.diameter);
+        ellipse(0,0,this.diameter,this.diameter);
+        ellipseMode(CENTER);
         pop();
 
     }
